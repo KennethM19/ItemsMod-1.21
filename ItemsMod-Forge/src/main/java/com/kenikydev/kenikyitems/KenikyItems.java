@@ -11,6 +11,7 @@ import com.kenikydev.kenikyitems.item.ModItems;
 import com.kenikydev.kenikyitems.potion.ModPotions;
 import com.kenikydev.kenikyitems.sound.ModSounds;
 import com.kenikydev.kenikyitems.util.ModItemProperties;
+import com.kenikydev.kenikyitems.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
@@ -67,6 +68,8 @@ public class KenikyItems
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        ModVillagers.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
